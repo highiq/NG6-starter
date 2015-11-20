@@ -25,7 +25,7 @@ angular.element(document).ready(() => {
 		noAngularDOM = container.cloneNode(true);
 		if ((!System.hotReloader)) {
 			System.import('capaj/jspm-hot-reloader').then(HotReloader => {
-				System.hotReloader = new HotReloader.default('http://localhost:8081/');
+				System.hotReloader = new HotReloader.default('http://localhost:8071/');
 				System.hotReloader.on('change', function (name) {
 					console.log(name, 'changed')
 				})

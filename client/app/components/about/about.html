@@ -2,4 +2,36 @@
 <h1>{{ vm.name }}</h1>
 <section>
 	This is the about nothing page! Remove me if you don't need me please
+	
+	<ul class="about">
+	  <li ui-sref=".account" ui-sref-active="selected">Account</li>
+	  <li ui-sref=".survey"  ui-sref-active="selected">Survey</li>
+	</ul>
+	
+	<h3>about.account</h3>
+	<div ui-view="account"></div>
+	<br/><br/>
+	
+	<h3>about.survey</h3>
+	<div ui-view="survey"></div>
+	<br/><br/>
+	
 </section>
+
+<script type="text/ng-template" id="account.html">
+	<h1>About</h1>
+	<a ui-sref=".stuff">My Stuff</a>
+	<a ui-sref=".things">My Things</a>
+	<div ui-view></div>
+</script>
+
+<script type="text/ng-template" id="survey.html">
+	<h3>Take this survey</h3>
+	How do you like your stuff? 
+	<br>
+	<textarea rows="5" cols="55"></textarea>
+	<br>
+	How do you like your things? 
+	<br>
+	<textarea rows="5" cols="55"></textarea>
+</script>
